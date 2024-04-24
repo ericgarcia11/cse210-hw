@@ -1,4 +1,5 @@
 ## Version Control System (VCS, like GIT) = A version control system, or VCS, tracks the history of changes as people and teams collaborate on projects together.
+Check this link to learn more about VCS -> https://docs.github.com/en/get-started/using-git/about-git
 
 * use "git add" and the complete directory name, (case matters) or just '.' to my current file - always to add the current file to stage area (area de preparacao).
 * use "git status" to see if my file is on the stage area or not.
