@@ -15,3 +15,9 @@ Check this link to learn more about VCS -> https://docs.github.com/en/get-starte
     - git commit -m "any comment here"
     - git push
     - git status (optional)
+
+
+#### What is version control and why is it important?
+One Version Control System (VCS) is a system responsible to record and manage the changes in a project, which is especially important in a project with different collaborators. 
+There are many benefits in using an VCS, one example is that it prevents a collaborator's version from overlapping another, generating errors in the project.
+To avoid this, you can use an VCS such as GIT, to each collaborator work with his own branch, without affect the main project, until they finish their updates, by using "git push" to update the main project (or repository) with their updated branch for example, and using "git status" to check the stage status always when is needed, to avoid errors on pushing updates.
