@@ -37,9 +37,21 @@ class Program
             numbers.Add(number);
 
         }
-        Console.WriteLine($"Your list is {numbers}");
-
-
+        // Console.WriteLine($"Your list is {numbers}");
+        int sum = 0;
+        int largest = -1;
+        foreach (int i in numbers)
+        {
+            sum += i;
+            if (i > largest){
+                largest = i;
+            }
+        }
+        int list_size = numbers.Count;
+        float average = sum / list_size;
+        Console.WriteLine($"The sum is: {sum}");
+        Console.WriteLine($"The average is: {average}");
+        Console.WriteLine($"The largest number is: {largest}");
         
 
 
