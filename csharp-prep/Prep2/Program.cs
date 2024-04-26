@@ -52,10 +52,10 @@ class Program
         }
         
         if (status == 1){
-            Console.WriteLine($"Your grade is {grade}");
+            Console.WriteLine($"Your grade is {complete_grade}");
             Console.WriteLine("Congratulations, you have passed on your current class!");
         } else {
-            Console.WriteLine($"Your grade is {grade}");
+            Console.WriteLine($"Your grade is {complete_grade}");
             Console.WriteLine("You did not passed. Keep trying to get a better grade on the next time.");
         }
         
