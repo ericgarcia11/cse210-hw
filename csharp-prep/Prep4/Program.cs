@@ -34,6 +34,9 @@ class Program
             Console.WriteLine("Enter number: ");
             string input = Console.ReadLine();
             number = Convert.ToInt32(input);
+            if (number == 0){
+                break;
+            }
             numbers.Add(number);
 
         }
