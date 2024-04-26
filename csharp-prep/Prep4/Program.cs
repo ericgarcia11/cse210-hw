@@ -27,15 +27,15 @@ class Program
         List<int> numbers = new List<int>();
         int number = 1;
 
-        do
-        {
-              Console.WriteLine("Enter a list of numbers, type 0 when finished.");
-        } 
-        while (number != 0);{
+   
+        Console.WriteLine("Enter a list of numbers, type 0 when finished.");
+        
+        while (number != 0){
             Console.WriteLine("Enter number: ");
             string input = Console.ReadLine();
             number = Convert.ToInt32(input);
             numbers.Add(number);
+
         }
         Console.WriteLine($"Your list is {numbers}");
 
