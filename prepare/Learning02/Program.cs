@@ -19,7 +19,14 @@ class Program
         job2._startYear = 2001;
         job2._endYear = 2023;
         // Console.WriteLine(job2._companyName);
-        job1.ShowJobInformation();
+        job2.ShowJobInformation();
+
+
+        Resume resume1 = new Resume();
+        resume1._personName = "Eric Garcia";
+        resume1._jobs.Add(job1);
+        resume1._jobs.Add(job2);
+        resume1.ShowResume();
 
     }
 }
