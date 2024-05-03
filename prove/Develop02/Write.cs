@@ -1,15 +1,25 @@
 public class Write
 {
-     public string _questionOne;
-     public string _questionTwo;
-     public string _questionThree;
+     public string _answer;
 
+     public string _promptAndNote;
+     List<string> _writings = new List<string>();
      public Write()
     {
     }
 
-    public void ShowJobInformation()
+    public void AddPromptsToWritingsList()
     {
-            Console.WriteLine($"");
+            _writings.Add(_promptAndNote);
     }
+
+    public void displayWritingList()
+    {
+        foreach (string record in _writings)
+        {
+            Console.WriteLine(record);
+        }
+    }
+
+    
 }

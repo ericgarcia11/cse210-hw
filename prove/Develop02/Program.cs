@@ -5,6 +5,13 @@ class Program
     static void Main(string[] args)
     {
         int response = 0;
+        List<string> questions = new List<string>
+        {
+            "If I had one thing I could over today, what would it be?",
+            "What was the best part of my day?",
+            "If I had one thing I could over today, what would it be?"
+        };
+        Random random = new Random();
         while (response != 5)
         {
             Console.WriteLine("Please, select one of the following choices:");
@@ -19,14 +26,19 @@ class Program
             if (response == 5){
                 break;
             }
+            DateTime currentDate = DateTime.Now;
+            int randomIndex = random.Next(0,questions.Count);
+            string question = questions[randomIndex];
+            Write day1 = new Write();
             if (response == 1){
-                Write day1 = new Write();
-                Console.WriteLine("If I had one thing I could over today, what would it be?");
-                day1._questionOne = Console.ReadLine();
-                Console.WriteLine("What was the best part of my day?");
-                day1._questionTwo = Console.ReadLine();
-                Console.WriteLine("If I had one thing I could over today, what would it be?");
-                day1._questionThree = Console.ReadLine();
+                Console.WriteLine(question);
+                day1._answer = Console.ReadLine();
+                day1._promptAndNote = $"{currentDate} -- Prompt: {question}\n{day1._answer}";
+                day1.AddPromptsToWritingsList();
+                break;
+            }
+            if (response == 2){
+                day1.displayWritingList();
             }
 
 
