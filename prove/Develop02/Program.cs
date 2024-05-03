@@ -47,6 +47,7 @@ class Program
                 Console.WriteLine("What is the file name?");
                 string fileName = Console.ReadLine();
                 List<string> recordToSave = myDay.AddPromptsToWritingsList();
+                Console.WriteLine(recordToSave);
                 Files file = new Files(fileName);
                 file.addLineToFile(recordToSave);
 
