@@ -48,6 +48,7 @@ class Program
                 string fileName = Console.ReadLine();
                 string recordToSave = myDay._promptAndNote;
                 Files file = new Files(fileName);
+                file.fileName = fileName;
                 file.addLineToFile(recordToSave);
 
             }
