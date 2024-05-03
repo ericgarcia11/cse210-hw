@@ -9,7 +9,9 @@ class Program
         {
             "If I had one thing I could over today, what would it be?",
             "What was the best part of my day?",
-            "If I had one thing I could over today, what would it be?"
+            "If I had one thing I could over today, what would it be?",
+            "What was the strongest emotion I felt today?",
+            "Who was the most interesting person I interacted with today?"
         };
         Random random = new Random();
         Write myDay = new Write();
