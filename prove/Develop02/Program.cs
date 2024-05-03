@@ -35,7 +35,6 @@ class Program
                 day1._answer = Console.ReadLine();
                 day1._promptAndNote = $"{currentDate} -- Prompt: {question}\n{day1._answer}";
                 day1.AddPromptsToWritingsList();
-                break;
             }
             if (response == 2){
                 day1.displayWritingList();
