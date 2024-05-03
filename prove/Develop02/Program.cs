@@ -41,7 +41,11 @@ class Program
                 myDay.displayWritingList();
             }
             if (response == 3){
-                // LOAD
+                Console.WriteLine("What is the file name?");
+                string fileName = Console.ReadLine();
+                Files file = new Files(fileName);
+                file.fileName = fileName;
+                file.readFile();
             }
             if (response == 4){
                 Console.WriteLine("What is the file name?");
