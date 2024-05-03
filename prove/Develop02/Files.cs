@@ -24,16 +24,4 @@ public class Files
                     outputFile.WriteLine(recordToSave);
                 }    
         }
-
-    public void readFile()
-    {
-        using (StreamReader inputFile = new StreamReader(fileName))
-        {   
-            string line;
-            while ((line = inputFile.ReadLine()) != null)
-                {
-                    Console.WriteLine(line);
-                }
-        }
-    }
 }

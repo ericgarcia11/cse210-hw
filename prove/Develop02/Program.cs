@@ -1,5 +1,5 @@
 using System;
-
+using System.IO;
 class Program
 {
     static void Main(string[] args)
@@ -43,9 +43,14 @@ class Program
             if (response == 3){
                 Console.WriteLine("What is the file name?");
                 string fileName = Console.ReadLine();
-                Files file = new Files(fileName);
-                file.fileName = fileName;
-                file.readFile();
+                using (StreamReader inputFile = new StreamReader(fileName))
+                {   
+                    string line;
+                    while ((line = inputFile.ReadLine()) != null)
+                        {
+                            Console.WriteLine(line);
+                        }
+                }
             }
             if (response == 4){
                 Console.WriteLine("What is the file name?");
