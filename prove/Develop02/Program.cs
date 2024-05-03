@@ -40,6 +40,17 @@ class Program
             if (response == 2){
                 myDay.displayWritingList();
             }
+            if (response == 3){
+                // LOAD
+            }
+            if (response == 4){
+                Console.WriteLine("What is the file name?");
+                string fileName = Console.ReadLine();
+                List<string> recordToSave = myDay.AddPromptsToWritingsList();
+                Files file = new Files(fileName);
+                file.addLineToFile(recordToSave);
+
+            }
 
 
         }
