@@ -17,16 +17,12 @@ public class Files
     }
 
 
-    public void addLineToFile(List<string> recordToSave)
+    public void addLineToFile(string recordToSave)
         {
-            foreach (string record in recordToSave)
-            {
                 using (StreamWriter outputFile = new StreamWriter(fileName, true))
                 {
-                    outputFile.WriteLine(record);
-                }
-            }
-            
+                    outputFile.WriteLine(recordToSave);
+                }    
         }
 
     public void readFile()
