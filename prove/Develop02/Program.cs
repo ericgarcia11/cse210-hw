@@ -12,6 +12,7 @@ class Program
             "If I had one thing I could over today, what would it be?"
         };
         Random random = new Random();
+        Write myDay = new Write();
         while (response != 5)
         {
             Console.WriteLine("Please, select one of the following choices:");
@@ -29,15 +30,15 @@ class Program
             DateTime currentDate = DateTime.Now;
             int randomIndex = random.Next(0,questions.Count);
             string question = questions[randomIndex];
-            Write day1 = new Write();
+            
             if (response == 1){
                 Console.WriteLine(question);
-                day1._answer = Console.ReadLine();
-                day1._promptAndNote = $"{currentDate} -- Prompt: {question}\n{day1._answer}";
-                day1.AddPromptsToWritingsList();
+                myDay._answer = Console.ReadLine();
+                myDay._promptAndNote = $"{currentDate} -- Prompt: {question}\n{myDay._answer}";
+                myDay.AddPromptsToWritingsList();
             }
             if (response == 2){
-                day1.displayWritingList();
+                myDay.displayWritingList();
             }
 
 
