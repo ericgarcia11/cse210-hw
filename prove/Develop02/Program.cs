@@ -19,7 +19,7 @@ class Program
         };
         Random random = new Random();
         Entry _entry = new Entry();
-        Journal journal = new Journal();
+        Journal _journal = new Journal();
         while (response != 5)
         {
             Console.WriteLine("Please, select one of the following choices:");
@@ -42,10 +42,10 @@ class Program
                 Console.WriteLine(question);
                 string entry = Console.ReadLine();
                 _entry._entry = $"{currentDate} -- Prompt: {question}\n{entry}";
-                journal.AddEntriesToJournal(_entry._entry);
+                _journal.AddEntriesToJournal(_entry._entry);
             }
             if (response == 2){
-                journal.displayEntries();
+                _journal.displayEntries();
             }
             if (response == 3){
                 Console.WriteLine("What is the file name?");
@@ -62,10 +62,9 @@ class Program
             if (response == 4){
                 Console.WriteLine("What is the file name?");
                 string fileName = Console.ReadLine();
-                string recordToSave = _entry._entry;
                 Files file = new Files(fileName);
                 file.fileName = fileName;
-                file.addLineToFile(recordToSave);
+                file.addJournalToFile(_journal);
 
             }
 

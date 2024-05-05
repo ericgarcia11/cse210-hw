@@ -16,7 +16,16 @@ public class Files
         }
     }
 
-
+    public void addJournalToFile(List<string> journal)
+        {
+                using (StreamWriter outputFile = new StreamWriter(fileName, true))
+                {
+                    foreach (string entry in journal)
+                    {
+                        outputFile.WriteLine(entry);
+                    }
+                }    
+        }
     public void addLineToFile(string recordToSave)
         {
                 using (StreamWriter outputFile = new StreamWriter(fileName, true))
