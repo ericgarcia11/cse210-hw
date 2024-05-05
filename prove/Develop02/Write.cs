@@ -1,10 +1,10 @@
-public class Write
+public class Entry
 {
      public string _answer;
 
      public string _promptAndNote;
      List<string> _writings = new List<string>();
-     public Write()
+     public Entry()
     {
     }
 

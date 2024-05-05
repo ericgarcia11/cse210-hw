@@ -14,7 +14,7 @@ class Program
             "Who was the most interesting person I interacted with today?"
         };
         Random random = new Random();
-        Write myDay = new Write();
+        Entry myDay = new Entry();
         while (response != 5)
         {
             Console.WriteLine("Please, select one of the following choices:");
