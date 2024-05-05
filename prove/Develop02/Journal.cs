@@ -19,5 +19,8 @@ public class Journal
         }
     }
 
-    
+    public List<string> returnJournal()
+    {
+        return _journal;
+    }
 }

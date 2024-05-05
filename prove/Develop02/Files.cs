@@ -20,7 +20,8 @@ public class Files
         {
                 using (StreamWriter outputFile = new StreamWriter(fileName, true))
                 {
-                    foreach (string entry in journal)
+                    List<string> entries = journal.returnJournal();
+                    foreach (string entry in entries)
                     {
                         outputFile.WriteLine(entry);
                     }
