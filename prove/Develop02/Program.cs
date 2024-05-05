@@ -62,9 +62,9 @@ class Program
             if (response == 4){
                 Console.WriteLine("What is the file name?");
                 string fileName = Console.ReadLine();
-                Files file = new Files(fileName);
-                file.fileName = fileName;
-                file.addJournalToFile(_journal);
+                Files _file = new Files(fileName);
+                _file.fileName = fileName;
+                _file.addJournalToFile(_journal);
 
             }
 

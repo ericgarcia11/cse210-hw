@@ -16,7 +16,7 @@ public class Files
         }
     }
 
-    public void addJournalToFile(List<string> journal)
+    public void addJournalToFile(Journal journal)
         {
                 using (StreamWriter outputFile = new StreamWriter(fileName, true))
                 {
