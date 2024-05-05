@@ -1,3 +1,4 @@
+// Eric Garcia
 // To exceed requirements, my program has three extra classes: Files, Journal, Entry
 // The principle of abstraction is used calling these classes, and using their behavior, turning this code
 // more simple.
