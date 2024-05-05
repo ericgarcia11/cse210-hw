@@ -1,3 +1,7 @@
+// To exceed requirements, my program has three extra classes: Files, Journal, Entry
+// The principle of abstraction is used calling these classes, and using their behavior, turning this code
+// more simple.
+
 using System;
 using System.IO;
 class Program
@@ -14,7 +18,8 @@ class Program
             "Who was the most interesting person I interacted with today?"
         };
         Random random = new Random();
-        Entry myDay = new Entry();
+        Entry _entry = new Entry();
+        Journal journal = new Journal();
         while (response != 5)
         {
             Console.WriteLine("Please, select one of the following choices:");
@@ -35,12 +40,12 @@ class Program
             
             if (response == 1){
                 Console.WriteLine(question);
-                myDay._answer = Console.ReadLine();
-                myDay._promptAndNote = $"{currentDate} -- Prompt: {question}\n{myDay._answer}";
-                myDay.AddPromptsToWritingsList();
+                string entry = Console.ReadLine();
+                _entry._entry = $"{currentDate} -- Prompt: {question}\n{entry}";
+                journal.AddEntriesToJournal(_entry._entry);
             }
             if (response == 2){
-                myDay.displayWritingList();
+                journal.displayEntries();
             }
             if (response == 3){
                 Console.WriteLine("What is the file name?");
@@ -57,7 +62,7 @@ class Program
             if (response == 4){
                 Console.WriteLine("What is the file name?");
                 string fileName = Console.ReadLine();
-                string recordToSave = myDay._promptAndNote;
+                string recordToSave = _entry._entry;
                 Files file = new Files(fileName);
                 file.fileName = fileName;
                 file.addLineToFile(recordToSave);
