@@ -39,7 +39,7 @@ class Fraction
 
     public Fraction (int numerator, int denominator){
         _top = numerator;
-        _bottom = 1;
+        _bottom = denominator;
     }
 
      public int GetNumerator()
