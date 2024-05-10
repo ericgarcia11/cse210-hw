@@ -19,6 +19,11 @@ class Program
         Console.WriteLine(fractionStr3);
         double fractionDec3 = fraction3.GetDecimalValue();
         Console.WriteLine(fractionDec3);
+        Fraction fraction4 = new Fraction(1,3);
+        string fractionStr4 = fraction4.GetFractionString();
+        Console.WriteLine(fractionStr4);
+        double fractionDec4 = fraction4.GetDecimalValue();
+        Console.WriteLine(fractionDec4);
     }
 }
 
@@ -71,7 +76,6 @@ class Fraction
 
     public double GetDecimalValue()
     {
-        double dividing = _top / _bottom; 
-        return dividing;
+        return (double)_top / (double)_bottom ;
     }
 }
