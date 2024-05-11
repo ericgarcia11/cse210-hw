@@ -38,26 +38,28 @@ class Scripture
                     hidden += 1;
                     wordObject.Hide();
                     newWord = wordObject.GetDisplayText();
-                    _words[j] = newWord + " ";
+                    _words[j] = newWord;
                     break;
                 }else{
                     newWord = wordObject.GetDisplayText();
-                     _words[j] = newWord + " ";
+                     _words[j] = newWord;
                     break;
                 }
             }
         }
-       _entireScripture = string.Join(" ", _words) ;
+       _entireScripture = string.Join(" ", _words);
     }
 
     public string GetDisplayText()
     {
+        _entireScripture = string.Join(" ", _words);
         string referenceFormated = _reference.GetDisplayText() + " " + _entireScripture;
         return referenceFormated;
     }
 
     public bool IsCompletelyHidden()
     {   bool status = false;
+        _entireScripture = string.Join(" ", _words);
         foreach (char i in _entireScripture){
             if (i != '_'){
                 break;
