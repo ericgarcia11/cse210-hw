@@ -25,7 +25,7 @@ class Reference
 
     public string GetDisplayText()
     {
-        if (_endVerse > 0)
+        if (_endVerse == 0)
         {
             Console.WriteLine("option 1 -" + _endVerse);
             string referenceFormated = $"{_book} {_chapter}:{_verse}";
