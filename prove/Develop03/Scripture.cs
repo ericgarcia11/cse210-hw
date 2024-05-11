@@ -59,7 +59,7 @@ class Scripture
 
     public bool IsCompletelyHidden()
     {   bool status = false;
-        _entireScripture = string.Join(" ", _words);
+        // _entireScripture = string.Join(" ", _words);
         foreach (char i in _entireScripture){
             if (i != '_'){
                 break;
