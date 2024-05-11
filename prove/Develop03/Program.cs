@@ -46,9 +46,11 @@ class Program
             Console.WriteLine("How many verses: " + howManyVerses);
             if (howManyVerses == 3)
             {
+                Console.WriteLine("How many verses: " + howManyVerses);
                 Reference nweReferenceObject = new Reference(referenceArray[0], int.Parse(referenceArray[1]), int.Parse(referenceArray[2]));
                 return nweReferenceObject;
             }else{
+                Console.WriteLine("How many verses: " + howManyVerses);
                 Reference nweReferenceObject = new Reference(referenceArray[0], int.Parse(referenceArray[1]), int.Parse(referenceArray[2]), int.Parse(referenceArray[3]));
                 return nweReferenceObject;
         }}
