@@ -30,7 +30,7 @@ class Program
         Reference referenceObject = getReferenceObject(referenceArray);
         Scripture scriptureObject = new Scripture(scripture,referenceObject);
         while (response != "quit"){
-            Console.Clear();
+            // Console.Clear();
             string display = scriptureObject.GetDisplayText();
             Console.WriteLine($"{display}");
             
