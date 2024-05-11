@@ -60,14 +60,25 @@ class Scripture
     public bool IsCompletelyHidden()
     {   bool status = false;
         // _entireScripture = string.Join(" ", _words);
-        foreach (char i in _entireScripture){
-            if (i != '_' || i != ' '){
-                break;
-            } else {
-            status = true;
+        // foreach (char i in _entireScripture){
+        //     if (i != '_'){
+        //         break;
+        //     } else {
+        //     status = true;
+        //     Console.WriteLine($"Deu true. Entire Scripure: {_entireScripture}\n");
+        //     }
+        // } 
+
+        string[] wordsToCheck = _entireScripture.Split(' ');
+
+        foreach (string character in wordsToCheck)
+        {
+            if (!character.All(c => c == '_' || c == ' '))
+            {
+                status = true; 
+                break;            
             }
-        } 
-                
+        }        
         return status;
     }
 
