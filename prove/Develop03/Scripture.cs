@@ -15,7 +15,7 @@ class Scripture
     }
 
     public void HideRandomWords(int numberToHide )
-    {   
+    {   _entireScripture = "";
         Random random = new Random();
         List<int> randomIndexes = new List<int>();
         while (randomIndexes.Count < numberToHide)
@@ -57,8 +57,15 @@ class Scripture
     }
 
     public bool IsCompletelyHidden()
-    {   
-        bool status = false;
+    {   bool status = false;
+        foreach (char i in _entireScripture){
+            if (i != '_'){
+                break;
+            } else {
+            status = true;
+            }
+        } 
+                
         return status;
     }
 

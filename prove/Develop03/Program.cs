@@ -29,12 +29,17 @@ class Program
         string[] referenceArray = reference.Split(',');
         Reference referenceObject = getReferenceObject(referenceArray);
         Scripture scriptureObject = new Scripture(scripture,referenceObject);
+        int wordsToHide = 2;
         while (response != "quit"){
-            // Console.Clear();
+            Console.Clear();
             string displayScripture = scriptureObject.GetDisplayText();
-            
             Console.WriteLine($"{displayScripture}");
-            scriptureObject.HideRandomWords(2);
+            scriptureObject.HideRandomWords(wordsToHide);
+
+            if (!scriptureObject.IsCompletelyHidden()){
+                wordsToHide += 2;
+                scriptureObject.HideRandomWords(wordsToHide);
+            }
             
             if (scriptureObject.IsCompletelyHidden()){
                 break;
