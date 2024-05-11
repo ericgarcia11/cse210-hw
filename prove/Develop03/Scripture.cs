@@ -21,7 +21,7 @@ class Scripture
         while (randomIndexes.Count < numberToHide)
         {
             int randomIndex = random.Next(0, _words.Count);
-            if (!randomIndexes.Contains(randomIndex));
+            if (!randomIndexes.Contains(randomIndex))
             {
                 randomIndexes.Add(randomIndex);
             }
