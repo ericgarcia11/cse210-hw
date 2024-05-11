@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
@@ -24,72 +25,30 @@ class Program
         int randomIndex = random.Next(0,scriptures.Count);
         string scripture = scriptures[randomIndex];
         string reference = references[randomIndex];
-        Console.Clear();
-        Console.WriteLine($"{reference}: {scripture}");
-    }
-}
-
-class Scripture
-{
-    private string _reference;
-    private List<string> _words;
-
-    public void HideRandomWords(int numberToHide )
-    {
-
-    }
-
-    public string GetDisplayText()
-    {
-        string text = "";
-        return text;
+        string response = "";
+        string[] referenceArray = reference.Split(',');
+        Reference referenceObject = getReferenceObject(referenceArray);
+        Scripture scriptureObject = new Scripture(scripture,referenceObject);
+        while (response != "quit"){
+            Console.Clear();
+            string display = scriptureObject.GetDisplayText();
+            Console.WriteLine($"{display}");
+            
+            if (scriptureObject.IsCompletelyHidden()){
+                break;
+            }
+            response = Console.ReadLine();
+        }
     }
 
-    public bool IsCompletelyHidden()
-    {
-        return true;
-    }
-
-}
-
-class _reference
-{
-    private string _book;
-    private int _chapter;
-    private int _verse;
-    private int _endVerse;
-
-    public void Hide()
-    {
-
-    }
-
-    public void Show()
-    {
-
-    }
-
-    public bool IsHidden()
-    {
-        return true;
-    }
-
-    public string GetDisplayText()
-    {
-        string text = "";
-        return text;
-    }
-
-}
-
-class Word
-{
-    private string  _text;
-    private bool _isHidden;
-
-    public string GetDisplayText()
-    {
-        string text = "";
-        return text;
-    }
+    public static Reference getReferenceObject(string[] referenceArray){
+            int howManyVerses = referenceArray.Length;
+            if (howManyVerses == 3)
+            {
+                Reference nweReferenceObject = new Reference(referenceArray[0], int.Parse(referenceArray[1]), int.Parse(referenceArray[2]));
+                return nweReferenceObject;
+            }else{
+                Reference nweReferenceObject = new Reference(referenceArray[0], int.Parse(referenceArray[1]), int.Parse(referenceArray[2]), int.Parse(referenceArray[3]));
+                return nweReferenceObject;
+        }}
 }
