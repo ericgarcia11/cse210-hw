@@ -30,7 +30,7 @@ class Program
         Reference referenceObject = getReferenceObject(referenceArray);
         Scripture scriptureObject = new Scripture(scripture,referenceObject);
         while (response != "quit"){
-            Console.Clear();
+            // Console.Clear();
             string display = scriptureObject.GetDisplayText();
             Console.WriteLine($"{display}");
             
@@ -45,9 +45,11 @@ class Program
             int howManyVerses = referenceArray.Length;
             if (howManyVerses == 3)
             {
+                Console.WriteLine("How many verses: opcao 1 - " + howManyVerses);
                 Reference nweReferenceObject = new Reference(referenceArray[0], int.Parse(referenceArray[1]), int.Parse(referenceArray[2]));
                 return nweReferenceObject;
             }else{
+                Console.WriteLine("How many verses: opcao 2 - " + howManyVerses);
                 Reference nweReferenceObject = new Reference(referenceArray[0], int.Parse(referenceArray[1]), int.Parse(referenceArray[2]), int.Parse(referenceArray[3]));
                 return nweReferenceObject;
         }}
