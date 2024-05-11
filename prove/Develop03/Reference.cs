@@ -6,7 +6,7 @@ class Reference
     private int _endVerse;
 
     public Reference(){
-        
+
     }
     public Reference(string book, int chapter, int verse)
     {
@@ -27,9 +27,11 @@ class Reference
     {
         if (_endVerse != default(int))
         {
+            Console.WriteLine("option 1");
             string referenceFormated = $"{_book} {_chapter}:{_verse}";
             return referenceFormated;
         }else{
+            Console.WriteLine("option 2");
             string referenceFormated = $"{_book} {_chapter}:{_verse}-{_endVerse}";
             return referenceFormated;
         }

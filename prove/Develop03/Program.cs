@@ -43,6 +43,7 @@ class Program
 
     public static Reference getReferenceObject(string[] referenceArray){
             int howManyVerses = referenceArray.Length;
+            Console.WriteLine("How many verses: " + howManyVerses);
             if (howManyVerses == 3)
             {
                 Reference nweReferenceObject = new Reference(referenceArray[0], int.Parse(referenceArray[1]), int.Parse(referenceArray[2]));
