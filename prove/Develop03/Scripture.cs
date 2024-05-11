@@ -61,11 +61,10 @@ class Scripture
     {   bool status = false;
         // _entireScripture = string.Join(" ", _words);
         foreach (char i in _entireScripture){
-            if (i != '_'){
+            if (i != '_' || i != ' '){
                 break;
             } else {
             status = true;
-            Console.WriteLine($"Deu true. Entire Scripure: {_entireScripture}\n");
             }
         } 
                 
