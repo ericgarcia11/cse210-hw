@@ -32,6 +32,7 @@ class Program
         while (response != "quit"){
             // Console.Clear();
             string displayScripture = scriptureObject.GetDisplayText();
+            
             Console.WriteLine($"{displayScripture}");
             scriptureObject.HideRandomWords(2);
             
