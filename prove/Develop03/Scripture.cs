@@ -65,7 +65,7 @@ class Scripture
                 break;
             } else {
             status = true;
-            // Console.WriteLine($"Deu true. Entire Scripure: {_entireScripture}\n");
+            Console.WriteLine($"Deu true. Entire Scripure: {_entireScripture}\n");
             }
         } 
                 
