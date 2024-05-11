@@ -7,7 +7,7 @@ class Scripture
     {
         string[] scriptureArray = scriptureString.Split(' ');
         _words.AddRange(scriptureArray);    
-        
+        _reference = referenceObject;
     }
 
     public void HideRandomWords(int numberToHide )
