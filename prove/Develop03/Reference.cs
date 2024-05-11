@@ -27,11 +27,9 @@ class Reference
     {
         if (_endVerse == 0)
         {
-            Console.WriteLine("option 1 -" + _endVerse);
             string referenceFormated = $"{_book} {_chapter}:{_verse}";
             return referenceFormated;
         }else{
-            Console.WriteLine("option 2 -" + _endVerse);
             string referenceFormated = $"{_book} {_chapter}:{_verse}-{_endVerse}";
             return referenceFormated;
         }

@@ -45,11 +45,9 @@ class Program
             int howManyVerses = referenceArray.Length;
             if (howManyVerses == 3)
             {
-                Console.WriteLine("How many verses: opcao 1 - " + howManyVerses);
                 Reference nweReferenceObject = new Reference(referenceArray[0], int.Parse(referenceArray[1]), int.Parse(referenceArray[2]));
                 return nweReferenceObject;
             }else{
-                Console.WriteLine("How many verses: opcao 2 - " + howManyVerses);
                 Reference nweReferenceObject = new Reference(referenceArray[0], int.Parse(referenceArray[1]), int.Parse(referenceArray[2]), int.Parse(referenceArray[3]));
                 return nweReferenceObject;
         }}
