@@ -31,8 +31,9 @@ class Program
         Scripture scriptureObject = new Scripture(scripture,referenceObject);
         while (response != "quit"){
             // Console.Clear();
-            string display = scriptureObject.GetDisplayText();
-            Console.WriteLine($"{display}");
+            string displayScripture = scriptureObject.GetDisplayText();
+            Console.WriteLine($"{displayScripture}");
+            scriptureObject.HideRandomWords(2);
             
             if (scriptureObject.IsCompletelyHidden()){
                 break;

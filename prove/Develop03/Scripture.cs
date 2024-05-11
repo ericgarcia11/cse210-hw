@@ -13,7 +13,7 @@ class Scripture
 
     public void HideRandomWords(int numberToHide )
     {
-
+        Console.WriteLine(_words);
     }
 
     public string GetDisplayText()
