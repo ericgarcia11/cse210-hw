@@ -15,7 +15,14 @@ class Scripture
     }
 
     public void HideRandomWords(int numberToHide )
-    {   _entireScripture = "";
+    {   
+        // 
+        Console.WriteLine("inicio da funcao" + _entireScripture);
+        // 
+        _entireScripture = "";
+        // 
+        Console.WriteLine("depois de limpar"+_entireScripture + "teste");
+        //
         Random random = new Random();
         List<int> randomIndexes = new List<int>();
         while (randomIndexes.Count < numberToHide)
@@ -47,6 +54,9 @@ class Scripture
                 }
             }
         }
+        // 
+        Console.WriteLine("final da funcao"+_entireScripture);
+        //
         
     }
 

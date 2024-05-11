@@ -37,7 +37,7 @@ class Program
             scriptureObject.HideRandomWords(wordsToHide);
 
             if (!scriptureObject.IsCompletelyHidden()){
-                wordsToHide += 2;
+                wordsToHide = wordsToHide+ 2;
                 scriptureObject.HideRandomWords(wordsToHide);
             }
             
