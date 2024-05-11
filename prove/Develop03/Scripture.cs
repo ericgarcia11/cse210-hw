@@ -11,18 +11,11 @@ class Scripture
         string[] scriptureArray = scriptureString.Split(' ');
         _words.AddRange(scriptureArray);    
         _reference = referenceObject;
-        _entireScripture = scriptureString;
+        _entireScripture = string.Join(" ", _words);
     }
 
     public void HideRandomWords(int numberToHide )
     {   
-        // 
-        Console.WriteLine("inicio da funcao" + _entireScripture);
-        // 
-        _entireScripture = "";
-        // 
-        Console.WriteLine("depois de limpar"+_entireScripture + "teste");
-        //
         Random random = new Random();
         List<int> randomIndexes = new List<int>();
         while (randomIndexes.Count < numberToHide)
@@ -45,19 +38,16 @@ class Scripture
                     hidden += 1;
                     wordObject.Hide();
                     newWord = wordObject.GetDisplayText();
-                    _entireScripture += newWord + " ";
+                    _words[j] = newWord + " ";
                     break;
                 }else{
                     newWord = wordObject.GetDisplayText();
-                    _entireScripture += newWord + " ";
+                     _words[j] = newWord + " ";
                     break;
                 }
             }
         }
-        // 
-        Console.WriteLine("final da funcao"+_entireScripture);
-        //
-        
+       _entireScripture = string.Join(" ", _words) ;
     }
 
     public string GetDisplayText()
