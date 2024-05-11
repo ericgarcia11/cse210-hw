@@ -52,7 +52,7 @@ class Scripture
 
     public string GetDisplayText()
     {
-        _entireScripture = string.Join(" ", _words);
+        // _entireScripture = string.Join(" ", _words);
         string referenceFormated = _reference.GetDisplayText() + " " + _entireScripture;
         return referenceFormated;
     }
