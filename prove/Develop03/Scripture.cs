@@ -62,7 +62,7 @@ class Scripture
         // _entireScripture = string.Join(" ", _words);
         foreach (char i in _entireScripture){
             if (i != '_'){
-                status = true;
+                status = false;
             } else {
             status = true;
             Console.WriteLine($"\nDeu true. Entire Scripure: {_entireScripture}\ni: {i}");
