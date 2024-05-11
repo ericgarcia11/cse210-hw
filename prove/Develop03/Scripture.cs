@@ -5,6 +5,7 @@ class Scripture
 
     public Scripture(string scriptureString, Reference referenceObject)
     {
+        _words = new List<string>();
         string[] scriptureArray = scriptureString.Split(' ');
         _words.AddRange(scriptureArray);    
         _reference = referenceObject;
