@@ -39,9 +39,8 @@ class Program
             if (!scriptureObject.IsCompletelyHidden()){
                 wordsToHide = wordsToHide+ 2;
                 scriptureObject.HideRandomWords(wordsToHide);
-            }
-            
-            if (scriptureObject.IsCompletelyHidden()){
+            }else{
+                Console.WriteLine("deu true.");
                 break;
             }
             response = Console.ReadLine();
