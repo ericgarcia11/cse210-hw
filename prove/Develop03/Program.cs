@@ -1,7 +1,5 @@
 using System;
 using System.Security.Cryptography.X509Certificates;
-
-
 // In order to claim extra points, I added a code part to get scriptures and references from two differents list, 
 // which can receive as many scriptures we want to run the program.
 class Program
@@ -37,13 +35,9 @@ class Program
             Console.Clear();
             string displayScripture = scriptureObject.GetDisplayText();
             Console.WriteLine($"{displayScripture}");
-            // scriptureObject.HideRandomWords(wordsToHide);
-            // Console.WriteLine($"\nLoop principal, palavras para esconder: {wordsToHide}");
             if (!scriptureObject.IsCompletelyHidden()){
                 scriptureObject.HideRandomWords(wordsToHide);
-                // wordsToHide = wordsToHide+ 2;
             }else{
-                // Console.WriteLine("deu true.");
                 break;
             }
             response = Console.ReadLine();

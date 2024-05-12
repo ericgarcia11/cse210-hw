@@ -10,7 +10,6 @@ class Word
 
     public void Hide()
     {
-        // Console.WriteLine($"\nfuncao hide, class Word, escondendo a palavra: {_text}.");
         int wordLenght = _text.Length;
         string hidenCharactere = "_";
         string newWord = "";

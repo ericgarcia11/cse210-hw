@@ -16,7 +16,6 @@ class Scripture
 
     public void HideRandomWords(int numberToHide )
     {   
-        // Console.WriteLine($"\niniciando a hideRandomWords.");
         int count = 0;
         foreach (string i in _words)
         {
@@ -27,10 +26,10 @@ class Scripture
                 {
                     break;
                 }
-            }
-            if (count <= 1){
+            }    
+        }
+        if (count <= 1){
                 numberToHide = 1;
-            }
         }
         Random random = new Random();
         List<int> randomIndexes = new List<int>();
@@ -48,19 +47,14 @@ class Scripture
                 randomIndexes.Add(randomIndex);
             }
         }
-        // Console.WriteLine($"\nrandomIndexes.Count = {randomIndexes.Count}, numberToHide = {numberToHide}");
         int hidden = 0;
         for (int j = 0; j < _words.Count;j++)
         {   
-            // Console.WriteLine($"\nloop j, palavra: {_words[j]}.");
             Word wordObject = new Word(_words[j]);
             string newWord = "";
             while (hidden < numberToHide)
             {
-                // Console.WriteLine($"\n while no loop j,hidden = {hidden}, numberToHide = {numberToHide}.");
-                // if (randomIndexes[0] == j){
                 if (randomIndexes.Contains(j)){
-                    // randomIndexes.RemoveAt(0);
                     hidden += 1;
                     wordObject.Hide();
                     newWord = wordObject.GetDisplayText();
@@ -73,29 +67,17 @@ class Scripture
                 }
             }
         }
-        // Console.WriteLine($"\nexecutada a hideRandomWords.");
         _entireScripture = string.Join(" ", _words);
     }
 
     public string GetDisplayText()
     {
-        // _entireScripture = string.Join(" ", _words);
         string referenceFormated = _reference.GetDisplayText() + " " + _entireScripture;
         return referenceFormated;
     }
 
     public bool IsCompletelyHidden()
     {   bool status = true;
-        // _entireScripture = string.Join(" ", _words);
-        // foreach (char i in _entireScripture){
-        //     if (i != '_'){
-        //         break;
-        //     } else {
-        //     status = true;
-        //     Console.WriteLine($"Deu true. Entire Scripure: {_entireScripture}\n");
-        //     }
-        // } 
-
         string[] wordsToCheck = _entireScripture.Split(' ');
 
         foreach (string character in wordsToCheck)
@@ -106,7 +88,6 @@ class Scripture
                 break;            
             }
         }     
-        // Console.WriteLine($"\nfuncao IsCompletelyHidden, status: {status}.");   
         return status;
     }
 
