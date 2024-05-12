@@ -16,6 +16,7 @@ class Scripture
 
     public void HideRandomWords(int numberToHide )
     {   
+        // this function was really hard. I took me about 8 hours to complete the entire code.
         int count = 0;
         foreach (string i in _words)
         {
