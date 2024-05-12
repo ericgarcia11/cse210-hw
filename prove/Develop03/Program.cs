@@ -34,7 +34,7 @@ class Program
             // Console.Clear();
             string displayScripture = scriptureObject.GetDisplayText();
             Console.WriteLine($"{displayScripture}");
-            scriptureObject.HideRandomWords(wordsToHide);
+            // scriptureObject.HideRandomWords(wordsToHide);
             Console.WriteLine($"\nLoop principal, palavras para esconder: {wordsToHide}");
             if (!scriptureObject.IsCompletelyHidden()){
                 wordsToHide = wordsToHide+ 2;
