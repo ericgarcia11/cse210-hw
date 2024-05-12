@@ -47,7 +47,8 @@ class Scripture
                 }
             }
         }
-       _entireScripture = string.Join(" ", _words);
+        Console.WriteLine($"\nexecutada a hideRandomWords.");
+        _entireScripture = string.Join(" ", _words);
     }
 
     public string GetDisplayText()

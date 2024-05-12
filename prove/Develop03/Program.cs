@@ -31,11 +31,11 @@ class Program
         Scripture scriptureObject = new Scripture(scripture,referenceObject);
         int wordsToHide = 2;
         while (response != "quit"){
-            Console.Clear();
+            // Console.Clear();
             string displayScripture = scriptureObject.GetDisplayText();
             Console.WriteLine($"{displayScripture}");
             scriptureObject.HideRandomWords(wordsToHide);
-
+            Console.WriteLine($"\nLoop principal, palavras para esconder: {wordsToHide}");
             if (!scriptureObject.IsCompletelyHidden()){
                 wordsToHide = wordsToHide+ 2;
                 scriptureObject.HideRandomWords(wordsToHide);
