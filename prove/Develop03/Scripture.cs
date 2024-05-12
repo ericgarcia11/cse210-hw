@@ -75,8 +75,10 @@ class Scripture
         {
             if (!character.All(c => c == '_' || c == ' '))
             {
-                status = true; 
+                status = false; 
                 break;            
+            } else{
+                status = true;
             }
         }        
         return status;
