@@ -38,7 +38,7 @@ class Program
             Console.WriteLine($"\nLoop principal, palavras para esconder: {wordsToHide}");
             if (!scriptureObject.IsCompletelyHidden()){
                 scriptureObject.HideRandomWords(wordsToHide);
-                wordsToHide = wordsToHide+ 2;
+                // wordsToHide = wordsToHide+ 2;
             }else{
                 Console.WriteLine("deu true.");
                 break;
