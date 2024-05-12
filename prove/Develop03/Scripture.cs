@@ -27,6 +27,7 @@ class Scripture
                 randomIndexes.Add(randomIndex);
             }
         }
+        Console.WriteLine($"\nrandomIndexes.Count = {randomIndexes.Count}, numberToHide = {numberToHide}");
         int hidden = 0;
         for (int j = 0; j < _words.Count;j++)
         {   
