@@ -17,6 +17,21 @@ class Scripture
     public void HideRandomWords(int numberToHide )
     {   
         // Console.WriteLine($"\niniciando a hideRandomWords.");
+        int count = 0;
+        foreach (string i in _words)
+        {
+            if (i.Any(c => c != '_'))
+            {
+                count++;
+                if (count > 1)
+                {
+                    break;
+                }
+            }
+            if (count <= 1){
+                numberToHide = 1;
+            }
+        }
         Random random = new Random();
         List<int> randomIndexes = new List<int>();
         while (randomIndexes.Count < numberToHide)
