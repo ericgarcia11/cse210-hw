@@ -58,7 +58,7 @@ class Scripture
     }
 
     public bool IsCompletelyHidden()
-    {   bool status = false;
+    {   bool status = true;
         // _entireScripture = string.Join(" ", _words);
         // foreach (char i in _entireScripture){
         //     if (i != '_'){
@@ -73,13 +73,10 @@ class Scripture
 
         foreach (string character in wordsToCheck)
         {
-            if (!character.All(c => c == '_' || c == ' '))
+            if (!character.Any(c => c == '_' || c == ' '))
             {
                 status = false; 
                 break;            
-            } else{
-                status = true;
-                Console.WriteLine("finishing");
             }
         }        
         return status;
