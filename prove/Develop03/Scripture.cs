@@ -79,6 +79,7 @@ class Scripture
                 break;            
             } else{
                 status = true;
+                Console.WriteLine("finishing");
             }
         }        
         return status;
