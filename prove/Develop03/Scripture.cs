@@ -16,6 +16,7 @@ class Scripture
 
     public void HideRandomWords(int numberToHide )
     {   
+        Console.WriteLine($"\niniciando a hideRandomWords.");
         Random random = new Random();
         List<int> randomIndexes = new List<int>();
         while (randomIndexes.Count < numberToHide)
@@ -29,6 +30,7 @@ class Scripture
         int hidden = 0;
         for (int j = 0; j < _words.Count;j++)
         {   
+            Console.WriteLine($"\nloop j, palavra: {_words[j]}.");
             Word wordObject = new Word(_words[j]);
             string newWord = "";
             while (hidden < numberToHide)
@@ -79,7 +81,8 @@ class Scripture
                 status = false; 
                 break;            
             }
-        }        
+        }     
+        Console.WriteLine($"\nfuncao IsCompletelyHidden, status: {status}.");   
         return status;
     }
 
