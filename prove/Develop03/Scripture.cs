@@ -35,6 +35,7 @@ class Scripture
             string newWord = "";
             while (hidden < numberToHide)
             {
+                Console.WriteLine($"\n while no loop j,hidden = {hidden}, numberToHide = {numberToHide}.");
                 if (randomIndexes[0] == j){
                     randomIndexes.RemoveAt(0);
                     hidden += 1;
