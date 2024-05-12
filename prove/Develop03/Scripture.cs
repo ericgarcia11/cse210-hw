@@ -16,29 +16,36 @@ class Scripture
 
     public void HideRandomWords(int numberToHide )
     {   
-        Console.WriteLine($"\niniciando a hideRandomWords.");
+        // Console.WriteLine($"\niniciando a hideRandomWords.");
         Random random = new Random();
         List<int> randomIndexes = new List<int>();
         while (randomIndexes.Count < numberToHide)
         {
+            // create a random index
             int randomIndex = random.Next(0, _words.Count);
+            // check if the provided index corresponds to a word already hidden. When is do not corresponds, it stop the while.
+            while (_words[randomIndex].Contains("_")){
+                randomIndex = random.Next(0, _words.Count);
+            }
+            // if the index already is on the indexes list, it is not added to indexes list. 
             if (!randomIndexes.Contains(randomIndex))
             {
                 randomIndexes.Add(randomIndex);
             }
         }
-        Console.WriteLine($"\nrandomIndexes.Count = {randomIndexes.Count}, numberToHide = {numberToHide}");
+        // Console.WriteLine($"\nrandomIndexes.Count = {randomIndexes.Count}, numberToHide = {numberToHide}");
         int hidden = 0;
         for (int j = 0; j < _words.Count;j++)
         {   
-            Console.WriteLine($"\nloop j, palavra: {_words[j]}.");
+            // Console.WriteLine($"\nloop j, palavra: {_words[j]}.");
             Word wordObject = new Word(_words[j]);
             string newWord = "";
             while (hidden < numberToHide)
             {
-                Console.WriteLine($"\n while no loop j,hidden = {hidden}, numberToHide = {numberToHide}.");
-                if (randomIndexes[0] == j){
-                    randomIndexes.RemoveAt(0);
+                // Console.WriteLine($"\n while no loop j,hidden = {hidden}, numberToHide = {numberToHide}.");
+                // if (randomIndexes[0] == j){
+                if (randomIndexes.Contains(j)){
+                    // randomIndexes.RemoveAt(0);
                     hidden += 1;
                     wordObject.Hide();
                     newWord = wordObject.GetDisplayText();
@@ -51,7 +58,7 @@ class Scripture
                 }
             }
         }
-        Console.WriteLine($"\nexecutada a hideRandomWords.");
+        // Console.WriteLine($"\nexecutada a hideRandomWords.");
         _entireScripture = string.Join(" ", _words);
     }
 
@@ -84,7 +91,7 @@ class Scripture
                 break;            
             }
         }     
-        Console.WriteLine($"\nfuncao IsCompletelyHidden, status: {status}.");   
+        // Console.WriteLine($"\nfuncao IsCompletelyHidden, status: {status}.");   
         return status;
     }
 
