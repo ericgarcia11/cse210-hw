@@ -8,7 +8,7 @@ class Program
         while (response != 4){
             Console.Clear();
             Console.WriteLine("Menu Options:"
-            + "\n  1. Start breathing actiivity\n  1. Start breathing activity"
+            + "\n  1. Start breathing actiivity"
             + "\n  2. Start reflecting activity"
             + "\n  3. Start listing activity"
             + "\n  4. Quit"
@@ -17,7 +17,11 @@ class Program
             response = Convert.ToInt32(answer);
             if (response == 1){
                 BreathingActivity breathingActivity = new BreathingActivity();
-                breathingActivity.run();
+                breathingActivity.Run();
+            }
+            if (response == 2){
+                ReflectionActivity reflectionActivity = new ReflectionActivity();
+                reflectionActivity.Run();
             }
         }
     }

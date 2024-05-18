@@ -20,7 +20,7 @@ public class Activity
 
     public void DisplayEndingMessage()
     {
-        Console.WriteLine($"You have complete another {_duration} seconds of {_name}");
+        Console.WriteLine($"You have complete another {_duration} seconds of {_name}.");
     }
 
     public void ShowSpinner(int seconds)

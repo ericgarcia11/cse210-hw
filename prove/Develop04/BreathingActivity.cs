@@ -7,7 +7,7 @@ public class BreathingActivity : Activity
         _description = "his activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
     }
 
-    public void run(){
+    public void Run(){
         DisplayStartingMessage();
         Console.Clear();
         // Display The "Get ready...." and animation
@@ -41,7 +41,7 @@ public class BreathingActivity : Activity
         while (DateTime.Now < endTime)
         {
             Console.Write("\n\nBreathe in...");
-            for (int i=5; i > 0; i--)
+            for (int i=4; i > 0; i--)
             {
                 Console.Write($"{i}");
                 Thread.Sleep(1000);
@@ -49,7 +49,7 @@ public class BreathingActivity : Activity
             }
 
             Console.Write($"\nNow breathe out...");
-            for (int i=5; i > 0; i--)
+            for (int i=4; i > 0; i--)
             {
                 Console.Write($"{i}");
                 Thread.Sleep(1000);
