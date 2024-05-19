@@ -1,6 +1,6 @@
 public class ReflectionActivity : Activity
 {
-    Random random = new Random();
+    private Random random = new Random();
     private List<string> _prompts = new List<string>{
         "Think of a time when you stood up for someone else.",
         "Think of a time when you did something really difficult.",
@@ -111,6 +111,9 @@ public class ReflectionActivity : Activity
             randomIndex = random.Next(0,_questions.Count);
         }
         _usedQuestions.Add(randomIndex);
+        if (_usedQuestions.Count == _questions.Count){
+            _usedQuestions.Clear();
+        }
         string randomQuestion = _questions[randomIndex];
         return randomQuestion;
     }
