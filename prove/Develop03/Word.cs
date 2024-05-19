@@ -8,7 +8,7 @@ class Word
         _text = word;
     }
 
-    public void Hide()
+    public void Hide() 
     {
         int wordLenght = _text.Length;
         string hidenCharactere = "_";

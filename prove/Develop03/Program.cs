@@ -21,7 +21,7 @@ class Program
             "1 Nephi,3,7",
             "1 Nephi,13,22",
             "Ether,1,25,27",
-            "D&C,121,45"
+            "D&C,121,45" 
         };
         int randomIndex = random.Next(0,scriptures.Count);
         string scripture = scriptures[randomIndex];
