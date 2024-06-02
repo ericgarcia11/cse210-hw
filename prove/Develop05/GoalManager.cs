@@ -91,8 +91,8 @@ public class GoalManager
             
             if (NewLevelReached()){
                 _level +=1;
-                Console.WriteLine($"Congratulations! You have reached a new level!!");
-                Console.WriteLine($"Level {_level} Unlocked :D");
+                Console.WriteLine($"\n ---- Congratulations! You have reached a new level!! ---- ");
+                Console.WriteLine($"  ---- Level {_level} Unlocked :D ----");
             }
             
         }
@@ -106,19 +106,16 @@ public class GoalManager
             count += 1;
         }
         int KeyNumber = (total / count) * 5;
+        // Console.WriteLine("KeyNumber: " + KeyNumber);
         return KeyNumber;
     }
 
     public bool NewLevelReached(){
-        if (_checkedPoints.Count != 0){
-            int x = _checkedPoints.Last();
-            int y = _score - x; 
-            double result = (double)y / QuantityPointsToNewLevel();
-            if (result >= 1){
-                _checkedPoints.Add(_score);
+            int result = _score / QuantityPointsToNewLevel();
+            if (result >= _level){
+                _level = result;
                 return true;
             }
-        }
         return false;
     }
 
