@@ -44,3 +44,15 @@ This is inheritance in the programming concept.
 When I create the ReflectionActivity, I can turn it in an Activity inheritor class by adding ": Activity" after the class name, like this: 
 - Normal: "public class ReflectionActivity".
 - inheritor: "public class ReflectionActivity : Activity". 
+
+#### What is polymorphism and why is it important?
+Imagine that you are a conductor of an orchestra and you want a C note. For the guitar players, they will need to put 3 fingers in some strings and parts of the guitar and use the other hand to play that strings; to piano players they will need to use +- 6 fingers above the piano keys, and others instrumental players will have another things to do, to reproduce a C note.
+As your role is not to play each thing, but to conduct the entire orchestra, you don't need to lost time with each detail about how they do it; but what you need is to ask for that behavior, that sound, in some way that, even being differents instruments, all of them could make the sound by that asked.
+Polymorphism is like this.
+You need something from different situations, and you need to call them in the same way, but they should have different behaviors and sometimes difference displays. Polymorphism is the ability of something to have or to be displayed in more than one form.
+For example, in my code this week, in a specific part, I need to save data into a file.
+I have different kind of data to save from each class, and this would be a problem; but, as all of them are Goal inherits, making the function "GetStringRepresentation" virtual, I can override the inherited classes functions to save each data the way I need.
+Basically doing this on parent class function:
+-  public virtual string GetStringRepresentation()
+And this on inherit classes function:
+- public override string GetStringRepresentation()
